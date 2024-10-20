@@ -23,6 +23,15 @@
     font-weight: bold;
     font-size: large;
 }
+.lukako{
+  border-top-left-radius: 16px;
+  /* border-bottom-left-radius: 15px; */
+}
+.addtocart{
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+}
 
 @media (max-width:1320px) {
     .homebar{
