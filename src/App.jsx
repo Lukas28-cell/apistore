@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Use Routes instead of Switch
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './container/Header';
- // Ensure the path matches the actual file case
 import ProductDetails from './container/ProductDetails';
 import ProductListing from './container/productListing';
+import Footer from './container/Footer';
+import { footerAPI } from './data/data';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,12 +15,13 @@ function App() {
       <Router>
        
         <Routes>
-          <Route path="/" element={<ProductListing />} /> {/* Updated syntax */}
-          <Route path="/product/:productId" element={<ProductDetails />} /> {/* Updated syntax */}
-          <Route path="*" element={<div>404 Not Found</div>} /> {/* Catch-all route for 404 */}
+          <Route path="/" element={<ProductListing />} /> 
+          <Route path="/product/:productId" element={<ProductDetails />} /> 
+          <Route path="*" element={<div>404 Not Found</div>} /> 
         </Routes>
       </Router>
       <Header />
+      <Footer footerAPI={footerAPI}/>
     </div>
   );
 }

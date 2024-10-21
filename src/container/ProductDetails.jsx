@@ -33,7 +33,7 @@ const ProductDetails = () => {
       {Object.keys(product).length === 0 ?(
         <div>...loading</div>
       ) : (
-        <div className=' flex justify-center mt-12'>
+        <div className=' flex justify-center mt-12 p-10'>
           <div className=' flex justify-between mt-6'>
             <div>AND</div>
             <div className=' flex justify-between space-x-10'>

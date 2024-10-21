@@ -2,12 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
+
 const ProductComponent = () => {
   const products = useSelector((state) => state.allproducts.products);
   const renderList = products.map((product) => {
     const { id, title, image, price, category } = product;
     return (
-      <div className=" mt-20 items-center justify-center border h-[24em] grid hover:translate-y-6 duration-500"  key={id}>
+      <div className=" mt-20 items-center justify-center border h-[24em] grid hover:translate-y-6 duration-500 "  key={id}>
         <Link to={`/product/${id}`}>
         <div className="bg-slate-200 w-36 relative ml-20 overflow-x-hidden ">
           <img src={image} alt={title} className=' grid items-center justify-center transition-all duration-200' />
